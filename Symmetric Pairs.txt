@@ -1,0 +1,12 @@
+select * from 
+(select a.* from functions a 
+inner join functions b 
+  on a.x=b.y and a.y=b.x
+where a.x < a.y
+ 
+union
+ 
+select * from functions  
+where x=y 
+group by x, y
+having count(*)>1)t
