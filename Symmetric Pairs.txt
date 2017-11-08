@@ -10,3 +10,4 @@ select * from functions
 where x=y 
 group by x, y
 having count(*)>1)t
+order by x,y
